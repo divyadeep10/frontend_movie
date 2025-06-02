@@ -23,7 +23,7 @@ const Home = () => {
       if (filters.sort) queryParams.append('sort', filters.sort);
       if (filters.search) queryParams.append('search', filters.search);
       
-      const response = await axios.get(`http://localhost:5000/api/movies?${queryParams}`);
+      const response = await axios.get(`https://backend-movie-hazel.vercel.app/api/movies?${queryParams}`);
       setMovies(response.data);
       setError(null);
     } catch (error) {

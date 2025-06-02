@@ -23,7 +23,7 @@ const ReviewForm = ({ movieId, onReviewAdded }) => {
     e.preventDefault();
     
     try {
-      const response = await axios.post('http://localhost:5000/api/reviews', {
+      const response = await axios.post('https://backend-movie-hazel.vercel.app/api/reviews', {
         ...formData,
         movieId
       });

@@ -10,7 +10,7 @@ const ReviewList = ({ reviews, onReviewUpdated }) => {
   
   const handleHelpful = async (reviewId) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/reviews/${reviewId}/helpful`);
+      const response = await axios.put(`https://backend-movie-hazel.vercel.app/api/reviews/${reviewId}/helpful`);
       onReviewUpdated(response.data);
     } catch (error) {
       console.error('Error marking review as helpful:', error);

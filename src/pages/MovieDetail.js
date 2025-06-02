@@ -18,11 +18,11 @@ const MovieDetail = () => {
         setLoading(true);
         
         // Fetch movie details
-        const movieResponse = await axios.get(`http://localhost:5000/api/movies/${id}`);
+        const movieResponse = await axios.get(`https://backend-movie-hazel.vercel.app/api/movies/${id}`);
         setMovie(movieResponse.data);
         
         // Fetch reviews for this movie
-        const reviewsResponse = await axios.get(`http://localhost:5000/api/reviews/movie/${id}`);
+        const reviewsResponse = await axios.get(`https://backend-movie-hazel.vercel.app/api/reviews/movie/${id}`);
         setReviews(reviewsResponse.data);
         
         setError(null);
